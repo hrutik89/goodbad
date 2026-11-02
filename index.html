@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML vs HTML5 | Good and Bad HTML</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top">Web<span>Basics</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#difference">Differences</a>
+        <a href="#good">Good HTML</a>
+        <a href="#bad">Bad HTML</a>
+        <a href="#demo">Demo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero container">
+      <p class="eyebrow">WEB TECHNOLOGY · ASSIGNMENT</p>
+      <h1>HTML vs HTML5</h1>
+      <p class="hero-text">Understand the evolution of HTML, compare important features, and see how semantic structure makes a web page clearer and more accessible.</p>
+      <a class="button" href="#difference">Explore the comparison ↓</a>
+    </section>
+
+    <section class="section container" id="difference">
+      <p class="eyebrow">01 — COMPARISON</p>
+      <h2>HTML and HTML5: key differences</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Feature</th><th>Earlier HTML (e.g., HTML 4.01)</th><th>HTML5</th></tr></thead>
+          <tbody>
+            <tr><th>Doctype</th><td>Long declaration, such as HTML 4.01 Transitional</td><td><code>&lt;!DOCTYPE html&gt;</code> — simple and short</td></tr>
+            <tr><th>Semantic structure</th><td>Often relied on generic <code>div</code> elements</td><td>Provides <code>header</code>, <code>nav</code>, <code>main</code>, <code>section</code>, <code>article</code>, and <code>footer</code></td></tr>
+            <tr><th>Audio and video</th><td>Often required third-party plugins</td><td>Native <code>audio</code> and <code>video</code> elements</td></tr>
+            <tr><th>Graphics</th><td>Usually depended on images or plugins</td><td>Supports <code>canvas</code> and SVG integration</td></tr>
+            <tr><th>Forms</th><td>Fewer built-in input types</td><td>Input types such as <code>email</code>, <code>date</code>, <code>number</code> and built-in validation</td></tr>
+            <tr><th>Storage and APIs</th><td>Limited standard browser features</td><td>Introduced/standardized web platform capabilities such as Web Storage and geolocation support through APIs</td></tr>
+            <tr><th>Accessibility and meaning</th><td>Meaning depended more on markup conventions</td><td>Semantic elements help browsers, assistive technology, and developers understand page regions</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note"><strong>Note:</strong> HTML5 is the commonly used name for the major HTML revision that introduced many of these features. HTML is now maintained as a living standard, so modern HTML continues to evolve.</p>
+    </section>
+
+    <section class="section section-tint" id="good">
+      <div class="container">
+        <p class="eyebrow">02 — GOOD HTML</p>
+        <h2>Use semantic tags and a clear structure</h2>
+        <p class="section-intro">Semantic elements describe the purpose of content. A logical heading order and meaningful labels make pages easier to maintain and navigate.</p>
+        <div class="example-grid">
+          <article class="example-card">
+            <div class="card-heading good-heading"><span class="status-icon">✓</span><div><h3>Good HTML</h3><p>Meaningful and well organized</p></div></div>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport"
+        content="width=device-width,
+        initial-scale=1.0"&gt;
+  &lt;title&gt;Student Blog&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Student Blog&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;nav aria-label="Main navigation"&gt;
+    &lt;a href="#article"&gt;Article&lt;/a&gt;
+  &lt;/nav&gt;
+  &lt;main&gt;
+    &lt;article id="article"&gt;
+      &lt;h2&gt;Learning HTML5&lt;/h2&gt;
+      &lt;p&gt;Semantic HTML adds meaning.&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/main&gt;
+  &lt;footer&gt;© 2026 Student Blog&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            <ul class="benefits">
+              <li>Uses semantic page landmarks</li>
+              <li>Includes language and viewport metadata</li>
+              <li>Uses a logical heading hierarchy</li>
+              <li>Uses a descriptive page title</li>
+            </ul>
+          </article>
+          <article class="example-card">
+            <div class="card-heading bad-heading"><span class="status-icon">!</span><div><h3>Bad HTML</h3><p>Unclear and poorly structured</p></div></div>
+            <pre><code>&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Page&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;font size="7"&gt;Student Blog&lt;/font&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;a href="#"&gt;Click here&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;h4&gt;Learning HTML5&lt;/h4&gt;
+    &lt;div&gt;Semantic HTML adds meaning.
+    &lt;div&gt;More text
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            <ul class="problems">
+              <li>Generic divs do not explain content roles</li>
+              <li>Deprecated presentational font element</li>
+              <li>Missing language and viewport metadata</li>
+              <li>Heading levels and nesting are inconsistent</li>
+            </ul>
+          </article>
+        </div>
+        <p class="note"><strong>Important:</strong> Browsers may still render poorly written HTML. “Bad HTML” here means less semantic, less accessible, harder-to-maintain markup—not necessarily that every line is invalid.</p>
+      </div>
+    </section>
+
+    <section class="section container" id="demo">
+      <p class="eyebrow">03 — LIVE PAGE EXAMPLE</p>
+      <h2>See the difference in page structure</h2>
+      <p class="section-intro">Both examples show similar content, but the semantic version makes the purpose of each region clearer.</p>
+      <div class="demo-grid">
+        <div class="mini-page">
+          <div class="mini-label good-label">GOOD HTML · SEMANTIC</div>
+          <div class="mini-header"><strong>Campus Connect</strong></div>
+          <div class="mini-nav"><a href="#demo">Home</a><a href="#demo">Events</a><a href="#demo">Contact</a></div>
+          <div class="mini-main">
+            <article class="mini-article">
+              <span class="mini-tag">ARTICLE</span>
+              <h3>Upcoming Tech Workshop</h3>
+              <p>Join a hands-on workshop to learn the basics of web development.</p>
+              <a class="mini-button" href="#contact">Read details</a>
+            </article>
+            <aside class="mini-aside"><strong>ASIDE</strong><p>Saturday · 10:00 AM</p></aside>
+          </div>
+          <div class="mini-footer">FOOTER · Contact and copyright information</div>
+        </div>
+        <div class="mini-page bad-page">
+          <div class="mini-label bad-label">BAD HTML · GENERIC ELEMENTS</div>
+          <div class="bad-block"><strong>Campus Connect</strong><small>div used as header</small></div>
+          <div class="bad-block">Home &nbsp; Events &nbsp; Contact <small>div used as navigation</small></div>
+          <div class="bad-block"><strong>Upcoming Tech Workshop</strong><small>div used as article</small><p>Join a hands-on workshop to learn the basics of web development.</p></div>
+          <div class="bad-block">Saturday · 10:00 AM <small>div used as aside</small></div>
+          <div class="bad-block">Contact and copyright information <small>div used as footer</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="contact">
+      <div class="container conclusion">
+        <p class="eyebrow">04 — CONCLUSION</p>
+        <h2>Write HTML for people and browsers.</h2>
+        <p>HTML5 introduced semantic elements and useful native browser features. Good HTML combines meaningful tags, valid nesting, accessible labels, and responsive metadata. CSS controls presentation; HTML describes the content and its structure.</p>
+        <a class="button button-light" href="#top">Back to top ↑</a>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer"><p>HTML vs HTML5 Demonstration · Built with HTML and CSS only</p></footer>
+</body>
+</html>
